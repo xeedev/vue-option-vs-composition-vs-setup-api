@@ -7,7 +7,7 @@
 </template>
 <script>
 // only add (setup) if you want to use 3rd setup api
-// Options API
+// 1: Options API
 /*export default {
   data: () => ({
     info: "Again",
@@ -26,7 +26,7 @@
     },
   },
 };*/
-// Composition API
+// 2: Composition API
 /*import { defineComponent, ref, computed } from "vue";
 export default defineComponent({
   setup() {
@@ -41,7 +41,7 @@ export default defineComponent({
     return { fullName, info, test };
   },
 });*/
-// Setup API (preffered)
+// 3: Setup API (preffered) please add "setup" keyword in above script for this
 /*import { ref, computed } from "vue";
 const info = "Again";
 const firstName = ref("Zeeshan");
@@ -51,8 +51,8 @@ function test() {
   firstName.value = "zeemax";
   lastName.value = ".";
 }*/
-// Hybrid approach for v2 to v3 migration
-// you cant use data inside setup
+// 4: Hybrid approach for v2 to v3 migration
+// you cant use data attributes inside setup
 import { defineComponent, ref, computed } from "vue";
 export default defineComponent({
   data: () => ({ info: "Again" }),
